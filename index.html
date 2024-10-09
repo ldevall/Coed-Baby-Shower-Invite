@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bear-ey Excited Baby Shower Invite</title>
+    <title>Micayla & Luke's Baby Shower</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #fef6e4;
-            background-image: url=https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/sincerely-media-9s7EOmv2HDA-unsplash.jpg?raw=true
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/ldevall/Coed-Baby-Shower-Invite/f8cb9e40f85c9c60c4627668efaaec6eb3cd5408/volodymyr-hryshchenko-QXzxIOdjuSs-unsplash.jpg');
             background-size: cover;
             background-position: center;
             color: #333;
@@ -18,64 +17,47 @@
             text-align: center;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Transparent background for text */
+            background-color: rgba(255, 255, 255, 0.8); /* Light transparent background for text */
             max-width: 700px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
         h1 {
+            font-size: 36px;
             color: #ff6f61;
-            font-size: 42px;
             margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #0066cc;
+            margin-bottom: 20px;
         }
         p {
             font-size: 18px;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         .bear-image {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         img {
-            width: 120px;
+            width: 200px;
             height: auto;
-            display: inline-block;
-            margin: 10px;
         }
-        .rsvp-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            text-align: left;
-            font-size: 16px;
-            margin-bottom: 5px;
+        .details {
+            font-size: 18px;
             color: #333;
         }
-        input, select, textarea {
-            width: 100%;
+        .raffle {
+            font-size: 16px;
+            margin-top: 20px;
             padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid #ff6f61;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #ff4f41;
+            background-color: #fef6e4;
+            border-radius: 10px;
+            border: 2px dashed #ff6f61;
+            display: inline-block;
         }
         .footer {
             margin-top: 20px;
@@ -88,38 +70,28 @@
 
     <div class="container">
         <div class="bear-image">
-            <img src="https://example.com/cartoon-bear1.png" alt="Cartoon Bear 1"> <!-- Replace with actual bear image URLs -->
-            <img src="https://example.com/cartoon-bear2.png" alt="Cartoon Bear 2">
-            <img src="https://example.com/cartoon-bear3.png" alt="Cartoon Bear 3">
+            <img src="https://example.com/cute-bear.png" alt="Bear Image"> <!-- Replace this URL with your bear image -->
         </div>
 
-        <h1>You Are "Bear-ey" Invited!</h1>
-        <p>We are so excited to have you join us for our coed baby shower!</p>
+        <h1>We’re Throwing a Baby Shower</h1>
+        <h2>In Honor of Micayla & Luke</h2>
 
-        <div class="rsvp-form">
-            <form action="https://formspree.io/f/{your_form_id}" method="POST">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+        <p>Join us for a fun, bear-themed baby shower!</p>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+        <div class="details">
+            <p><strong>Date:</strong> November 30th, 2024</p>
+            <p><strong>Time:</strong> 12:00 PM - 3:00 PM</p>
+            <p><strong>Location:</strong> The Sanchez Residence</p>
+        </div>
 
-                <label for="attendance">Will you be attending?</label>
-                <select id="attendance" name="attendance" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                    <option value="Maybe">Maybe</option>
-                </select>
-
-                <label for="message">Message (Optional):</label>
-                <textarea id="message" name="message" rows="4" placeholder="Leave us a message!"></textarea>
-
-                <button type="submit">Submit RSVP</button>
-            </form>
+        <div class="raffle">
+            <p><strong>Special Raffle:</strong></p>
+            <p>Bring a box of diapers to enter our raffle!<br>
+            1 Ticket Per Diaper Box for a Prize!</p>
         </div>
 
         <div class="footer">
-            <p>We can’t wait to celebrate with you! 🐻💛</p>
+            <p>We can't wait to see you there! 🐻</p>
         </div>
     </div>
 
