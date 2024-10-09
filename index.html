@@ -28,7 +28,7 @@
             background-color: rgba(255, 255, 255, 0.85); /* Slight background color to ensure text is readable */
         }
 
-        /* Add a semi-transparent overlay on the background image */
+        /* Adjust background image to cover the container fully */
         .container::before {
             content: '';
             position: absolute;
@@ -37,7 +37,7 @@
             right: 0;
             bottom: 0;
             background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%203.jpg?raw=true');
-            background-size: contain;
+            background-size: cover; /* Ensure the image covers the entire container */
             background-repeat: no-repeat;
             background-position: center;
             opacity: 0.5; /* Adjust this value to control transparency */
@@ -128,6 +128,28 @@
             background-color: #ff4f41;
         }
 
+        /* Registry Button */
+        .registry {
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        .registry a {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .registry a:hover {
+            background-color: #ff4f41;
+        }
+
         /* Media Queries for Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 {
@@ -155,6 +177,11 @@
 
             .rsvp-form {
                 padding: 15px;
+            }
+
+            .registry a {
+                font-size: 16px;
+                padding: 12px 20px;
             }
         }
 
@@ -185,6 +212,11 @@
             .rsvp-form {
                 padding: 10px;
             }
+
+            .registry a {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
         }
     </style>
 </head>
@@ -211,7 +243,7 @@
 
         <div class="rsvp-form">
             <form action="https://formspree.io/f/xnnqarkb" method="POST">
-                <label for="name">Your Name(s):</label>
+                <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Your Email:</label>
@@ -229,6 +261,11 @@
 
                 <button type="submit">Submit RSVP</button>
             </form>
+        </div>
+
+        <!-- Registry Link Section -->
+        <div class="registry">
+            <a href="https://my.babylist.com/micayla-oswald" target="_blank">View Our Baby Registry</a>
         </div>
 
         <div class="footer">
