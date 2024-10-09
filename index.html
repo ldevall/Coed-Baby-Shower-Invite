@@ -25,6 +25,7 @@
             border-radius: 20px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             z-index: 1; /* Keep content on top */
+            background-color: rgba(255, 255, 255, 0.85); /* Slight background color to ensure text is readable */
         }
 
         /* Add a semi-transparent overlay on the background image */
@@ -39,7 +40,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.3; /* Adjust this value to control transparency */
+            opacity: 0.5; /* Adjust this value to control transparency */
             z-index: -1; /* Ensure background is behind content */
             border-radius: 20px;
         }
@@ -47,25 +48,30 @@
         h1, h2, p, .footer p {
             font-weight: bold; /* Bold all text before the raffle and at the footer */
         }
+
         h1 {
             font-size: 36px;
             color: #6B4226; /* Brown color */
             margin-bottom: 10px;
         }
+
         h2 {
             font-size: 24px;
             color: #6B4226; /* Brown color */
             margin-bottom: 20px;
         }
+
         p {
             font-size: 18px;
             color: #6B4226; /* Brown color */
             margin-bottom: 15px;
         }
+
         .details {
             font-size: 18px;
             color: #6B4226; /* Brown color */
         }
+
         .raffle {
             font-size: 16px;
             margin-top: 20px;
@@ -75,11 +81,13 @@
             border: 2px dashed #ff6f61;
             display: inline-block;
         }
+
         .footer {
             margin-top: 20px;
             font-size: 14px;
             color: #6B4226;
         }
+
         .rsvp-form {
             background-color: rgba(255, 255, 255, 0.85); /* Light background for form readability */
             padding: 20px;
@@ -87,6 +95,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
         }
+
         input, select, textarea {
             width: 100%;
             padding: 10px;
@@ -95,6 +104,7 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
         button {
             background-color: #ff6f61;
             color: white;
@@ -104,8 +114,68 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         button:hover {
             background-color: #ff4f41;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 90%;
+            }
+
+            .raffle {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .rsvp-form {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 15px auto;
+                max-width: 95%;
+            }
+
+            .raffle {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .rsvp-form {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -121,7 +191,7 @@
             <p><strong>Date:</strong> November 30th, 2024</p>
             <p><strong>Time:</strong> 12:00 PM - 3:00 PM</p>
             <p><strong>Location:</strong> 6 Willow Street, Kitchener</p>
-             <p></strong> See Email for Parking</p>
+            <p><strong>See Email for Parking</strong></p>
         </div>
 
         <div class="raffle">
@@ -131,7 +201,7 @@
         </div>
 
         <div class="rsvp-form">
-            <form action="https://formspree.io/f/xnnqarkb" method="POST"> <!-- Updated with your Formspree URL -->
+            <form action="https://formspree.io/f/xnnqarkb" method="POST">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
