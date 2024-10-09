@@ -16,19 +16,34 @@
             padding: 0;
             text-align: center;
         }
+
         .container {
-            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%203.jpg?raw=true'); /* Correct center image behind text */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            position: relative;
             max-width: 700px;
             margin: 40px auto;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
-            opacity: 0.95; /* Slight transparency for readability */
+            z-index: 1; /* Keep content on top */
         }
+
+        /* Add a semi-transparent overlay on the background image */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%203.jpg?raw=true');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5; /* Adjust this value to control transparency */
+            z-index: -1; /* Ensure background is behind content */
+            border-radius: 20px;
+        }
+
         h1, h2, p, .footer p {
             font-weight: bold; /* Bold all text before the raffle and at the footer */
         }
