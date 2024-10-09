@@ -23,6 +23,19 @@
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1; /* Dim the bear image */
+            z-index: -1;
+        }
+        .center-image img {
+            width: 500px; /* Make the image bigger */
+            height: auto;
         }
         h1 {
             font-size: 36px;
@@ -38,13 +51,6 @@
             font-size: 18px;
             color: #6B4226; /* Brown color */
             margin-bottom: 15px;
-        }
-        .center-image {
-            margin-bottom: 30px;
-        }
-        img {
-            width: 200px;
-            height: auto;
         }
         .details {
             font-size: 18px;
@@ -64,6 +70,33 @@
             font-size: 14px;
             color: #6B4226;
         }
+        .rsvp-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #6B4226;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff4f41;
+        }
     </style>
 </head>
 <body>
@@ -73,10 +106,10 @@
             <img src="https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%20image.jpg?raw=true" alt="Bear Image"> <!-- Center bear image -->
         </div>
 
-        <h1>We Are Bearly Wait!</h1>
-        <h2>In Honor of Micayla & Luke</h2>
+        <h1>We Can Bearly Wait!</h1>
+        <h2>Join Us for a Coed Baby Shower</h2>
 
-        <p>Join us for a fun, bear-themed baby shower!</p>
+        <p>In Honor of Micayla & Luke</p>
 
         <div class="details">
             <p><strong>Date:</strong> November 30th, 2024</p>
@@ -88,6 +121,28 @@
             <p><strong>Special Raffle:</strong></p>
             <p>Bring a box of diapers to enter our raffle!<br>
             1 Ticket Per Diaper Box for a Prize!</p>
+        </div>
+
+        <div class="rsvp-form">
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="attendance">Will you be attending?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Maybe">Maybe</option>
+                </select>
+
+                <label for="message">Message (Optional):</label>
+                <textarea id="message" name="message" rows="4" placeholder="Leave us a message!"></textarea>
+
+                <button type="submit">Submit RSVP</button>
+            </form>
         </div>
 
         <div class="footer">
