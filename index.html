@@ -17,25 +17,16 @@
             text-align: center;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.85); /* Light transparent background for text */
+            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%20image.jpg?raw=true'); /* Bear image as background */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             max-width: 700px;
             margin: 40px auto;
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             position: relative;
-        }
-        .center-image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.3; /* Make the bear image more visible but still dim */
-            z-index: -1;
-        }
-        .center-image img {
-            width: 700px; /* Make the image bigger */
-            height: auto;
         }
         h1 {
             font-size: 36px;
@@ -60,7 +51,7 @@
             font-size: 16px;
             margin-top: 20px;
             padding: 10px;
-            background-color: #fef6e4;
+            background-color: rgba(255, 255, 255, 0.85); /* Keep the raffle text readable */
             border-radius: 10px;
             border: 2px dashed #ff6f61;
             display: inline-block;
@@ -71,7 +62,7 @@
             color: #6B4226;
         }
         .rsvp-form {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.85); /* Light background for form readability */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -102,10 +93,6 @@
 <body>
 
     <div class="container">
-        <div class="center-image">
-            <img src="https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%20image.jpg?raw=true" alt="Bear Image"> <!-- Center bear image -->
-        </div>
-
         <h1>We Can Bearly Wait!</h1>
         <h2>Join Us for a Coed Baby Shower</h2>
 
