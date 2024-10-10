@@ -8,41 +8,37 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/Background%20Image.jpg?raw=true');
+            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/46353.jpg?raw=true');
             background-size: cover;
             background-position: center;
             color: #6B4226; /* Brown color */
             margin: 0;
             padding: 0;
             text-align: center;
-        }
-
-        .container {
             position: relative;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            z-index: 1; /* Keep content on top */
-            background-color: rgba(255, 255, 255, 0.85); /* Slight background color to ensure text is readable */
         }
 
-        /* Adjust background image to cover the container fully */
-        .container::before {
+        /* Dim overlay for the background image */
+        body::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/center%203.jpg?raw=true');
-            background-size: 120%; /* Increase the bear image size */
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.5; /* Adjust this value to control transparency */
-            z-index: -1; /* Ensure background is behind content */
+            background: rgba(0, 0, 0, 0.4); /* Adjust transparency for dimming */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
             border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.85); /* Slight background color to ensure text is readable */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Ensure the container content stays on top */
         }
 
         h1, h2, p, .footer p {
