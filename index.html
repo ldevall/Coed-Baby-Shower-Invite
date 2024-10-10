@@ -16,21 +16,29 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            position: relative;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
         }
 
         /* Cloud effect directly behind the text */
         .cloud-text {
-            display: inline-block;
+            display: block;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
             border-radius: 20px;
             box-shadow: 0px 0px 40px 40px rgba(255, 255, 255, 0.5); /* Soft cloud effect */
-            margin-bottom: 20px;
         }
 
         h1, h2, p, .footer p {
             font-weight: bold; /* Bold all text before the raffle and at the footer */
+            margin: 0 0 10px;
         }
 
         h1 {
@@ -73,23 +81,16 @@
         }
 
         .rsvp-form {
-            display: inline-block;
+            display: block;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.6); /* Light cloud background */
             border-radius: 10px;
             box-shadow: 0px 0px 40px 40px rgba(255, 255, 255, 0.5);
         }
 
-        input[type="text"], input[type="email"], textarea {
-            width: 100%; /* Full width inside the form */
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid #6B4226;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        select {
+        input[type="text"], input[type="email"], textarea, select {
             width: 100%; /* Full width inside the form */
             padding: 10px;
             margin-bottom: 20px;
@@ -115,7 +116,7 @@
         /* Registry Button */
         .registry {
             display: inline-block;
-            margin: 20px 0;
+            margin: 20px auto;
             padding: 15px;
             background-color: rgba(255, 255, 255, 0.6);
             border-radius: 10px;
@@ -196,54 +197,56 @@
 </head>
 <body>
 
-    <div class="cloud-text">
-        <h1>We Can Bear-ly Wait</h1>
-        <h2>Join Us for a Coed Baby Shower</h2>
+    <div class="container">
+        <div class="cloud-text">
+            <h1>We Can Bear-ly Wait</h1>
+            <h2>Join Us for a Coed Baby Shower</h2>
 
-        <p>In Honour of Micayla & Luke</p>
+            <p>In Honour of Micayla & Luke</p>
 
-        <div class="details">
-            <p><strong>Date:</strong> November 30th, 2024</p>
-            <p><strong>Time:</strong> 12:00 PM - 3:00 PM</p>
-            <p><strong>Location:</strong> 6 Willow Street, Kitchener</p>
+            <div class="details">
+                <p><strong>Date:</strong> November 30th, 2024</p>
+                <p><strong>Time:</strong> 12:00 PM - 3:00 PM</p>
+                <p><strong>Location:</strong> 6 Willow Street, Kitchener</p>
+            </div>
+
+            <div class="raffle">
+                <p><strong>Special Raffle:</strong></p>
+                <p>Bring a box of diapers to enter our raffle to win a robot vacuum!<br>
+                1 diaper box per entry!</p>
+            </div>
         </div>
 
-        <div class="raffle">
-            <p><strong>Special Raffle:</strong></p>
-            <p>Bring a box of diapers to enter our raffle to win a robot vacuum!<br>
-            1 diaper box per entry!</p>
+        <!-- Registry Link Section -->
+        <div class="registry">
+            <a href="https://my.babylist.com/micayla-oswald" target="_blank">View Our Baby Registry</a>
         </div>
-    </div>
 
-    <!-- Registry Link Section -->
-    <div class="registry">
-        <a href="https://my.babylist.com/micayla-oswald" target="_blank">View Our Baby Registry</a>
-    </div>
+        <div class="rsvp-form">
+            <form action="https://formspree.io/f/xnnqarkb" method="POST">
+                <label for="name">Attending Name(s):</label>
+                <input type="text" id="name" name="name" required>
 
-    <div class="rsvp-form">
-        <form action="https://formspree.io/f/xnnqarkb" method="POST">
-            <label for="name">Attending Name(s):</label>
-            <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="attendance">Will you be attending?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Maybe">Maybe</option>
+                </select>
 
-            <label for="attendance">Will you be attending?</label>
-            <select id="attendance" name="attendance" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-                <option value="Maybe">Maybe</option>
-            </select>
+                <label for="message">Message (Optional):</label>
+                <textarea id="message" name="message" rows="4" placeholder="Leave us a message!"></textarea>
 
-            <label for="message">Message (Optional):</label>
-            <textarea id="message" name="message" rows="4" placeholder="Leave us a message!"></textarea>
+                <button type="submit">Submit RSVP</button>
+            </form>
+        </div>
 
-            <button type="submit">Submit RSVP</button>
-        </form>
-    </div>
-
-    <div class="footer">
-        <p>We can't wait to see you there! 🐻</p>
+        <div class="footer">
+            <p>We can't wait to see you there! 🐻</p>
+        </div>
     </div>
 
 </body>
