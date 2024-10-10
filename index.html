@@ -9,7 +9,8 @@
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('https://github.com/ldevall/Coed-Baby-Shower-Invite/blob/main/46353.jpg?raw=true');
-            background-size: cover;
+            background-size: 200px; /* Set the background size to smaller */
+            background-repeat: repeat; /* Repeat the background across the page */
             background-position: center;
             color: #6B4226; /* Brown color */
             margin: 0;
@@ -18,7 +19,7 @@
             position: relative;
         }
 
-        /* Dim overlay for the background image */
+        /* Reduce the dimming effect */
         body::before {
             content: '';
             position: absolute;
@@ -26,7 +27,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Adjust transparency for dimming */
+            background: rgba(0, 0, 0, 0.2); /* Adjust transparency to reduce dimming */
             z-index: -1;
         }
 
